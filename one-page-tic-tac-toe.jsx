@@ -34,6 +34,7 @@ class Game extends React.Component{
     handle(row, col, owner) {
         const cell = row+col;
 
+
         this.currentCell = {"A1": 0,
             "A2": 1,
             "A3": 2,
@@ -128,6 +129,7 @@ const GameBoard = (({value, onClick, nextPlayer, arr}) => {
     const columns = [1, 2, 3]
 
     return (<table>
+        <tbody>
         {rows.map((rowKey, rowIndex) => {
             return (
                 <tr key={rowKey + rowIndex}>
@@ -139,6 +141,7 @@ const GameBoard = (({value, onClick, nextPlayer, arr}) => {
                 </tr>
             )
         })}
+        </tbody>
     </table>)
 })
 
