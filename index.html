@@ -157,6 +157,7 @@ js"></script>
         }
 
         toggleNext() {
+            this.setState({value: null})
             this.state.nextPlayer === 'X'? this.setState({nextPlayer: 'O'}) :
                 this.setState({nextPlayer: 'X'})
 
@@ -196,14 +197,15 @@ js"></script>
 
 
             let catsGame = this.arr.every(function(i){
-                return i!= null
+                return i!== null
             })
 
             if(catsGame){
-                this.setState({value: "Cat's Game"})
+                this.setState({value: "Cat's Game."})
                 this.arr = [null,null, null,null,null, null, null,null, null];
-                const whoWins=checkWinner(this.arr)
-                this.setState({value: null})
+
+                //this.newGame()
+
 
             }
 
