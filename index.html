@@ -133,7 +133,6 @@ js"></script>
 
 <script type="text/babel">
 
-
     class Game extends React.Component{
         constructor(props){
             super(props);
@@ -165,6 +164,7 @@ js"></script>
         }
         handle(row, col, owner) {
             const cell = row+col;
+
 
             this.currentCell = {"A1": 0,
                 "A2": 1,
@@ -201,7 +201,7 @@ js"></script>
             })
 
             if(catsGame){
-                this.setState({value: "Cat's Game"})
+                this.setState({value: "Cat's Game."})
                 this.arr = [null,null, null,null,null, null, null,null, null];
 
                 //this.newGame()
@@ -260,6 +260,7 @@ js"></script>
         const columns = [1, 2, 3]
 
         return (<table>
+            <tbody>
             {rows.map((rowKey, rowIndex) => {
                 return (
                         <tr key={rowKey + rowIndex}>
@@ -271,6 +272,7 @@ js"></script>
                         </tr>
                 )
             })}
+            </tbody>
         </table>)
     })
 
@@ -312,18 +314,10 @@ js"></script>
 
 
 
-
-
-
-
     ReactDOM.render(<Game/>, document.getElementById('app'));
 
 
-
-
-
-
-
+    
 
 </script>
 
