@@ -202,6 +202,8 @@ js"></script>
             if(catsGame){
                 this.setState({value: "Cat's Game"})
                 this.arr = [null,null, null,null,null, null, null,null, null];
+                const whoWins=checkWinner(this.arr)
+                this.setState({value: null})
 
             }
 
