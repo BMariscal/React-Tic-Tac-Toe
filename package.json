@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "repository": "",
+  "homepage": "https://BMariscal.github.io/React-Tic-Tac-Toe",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "prod": "NODE_ENV=production node server.js",
-    "postinstall": "webpack -p"
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
   "repository": {
     "type": "git",
