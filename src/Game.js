@@ -1,6 +1,8 @@
+import React, {Component} from "react";
+import ReactDOM from "react-dom";
+import GameBoard from "./components/GameBoard";
+import ScoreDisplay from "./components/ScoreDisplay";
 
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 
 
 class Game extends React.Component{
@@ -111,8 +113,6 @@ const checkWinner = (arr)=>{
     ];
 
 
-
-
     for (let i = 0; i < winner.length; i++) {
         const [a, b, c] = winner[i];
 
@@ -124,61 +124,12 @@ const checkWinner = (arr)=>{
 }
 
 
-const GameBoard = (({value, onClick, nextPlayer, arr}) => {
-    const rows = ['A', 'B', 'C']
-    const columns = [1, 2, 3]
-
-    return (<table>
-        <tbody>
-        {rows.map((rowKey, rowIndex) => {
-            return (
-                <tr key={rowKey + rowIndex}>
-                    {columns.map((colKey, colIndex) => {
-                        return (
-                            <Cell key={colKey} reactKey={colKey} onClick={() => onClick(rowKey, colKey, nextPlayer)} value={arr[(rowIndex * 3) + colIndex]} nextPlayer={nextPlayer}/>
-                        )
-                    })}
-                </tr>
-            )
-        })}
-        </tbody>
-    </table>)
-})
 
 
 
-class Cell extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {value:''};
-
-    }
-
-
-    render() {
-        return (
-            <td  onClick={() => {
-                this.props.key
-                this.props.onClick()}} >{this.props.value}</td>
-        )
-    }
-
-}
 
 
 
-const ScoreDisplay = (props)=>{
-
-    return(
-
-        <div id="scoreBox">
-            <h4>TIC-TAC-TOE</h4>
-            <button type="button" onClick={() => props.newGame()}className= "newGame">New Game</button>
-            <h3>{props.winner}</h3>
-
-
-        </div>)
-};
 
 
 
