@@ -1,19 +1,19 @@
-
 import React from 'react';
 
-class Cell extends React.Component{
-    constructor(props){
+class Cell extends React.Component {
+    constructor(props) {
         super(props);
-        this.state = {value:''};
+        this.state = {value: ''};
 
     }
 
 
     render() {
         return (
-            <td  onClick={() => {
+            <td onClick={() => {
                 this.props.key
-                this.props.onClick()}} >{this.props.value}</td>
+                this.props.onClick()
+            }}>{this.props.value}</td>
         )
     }
 

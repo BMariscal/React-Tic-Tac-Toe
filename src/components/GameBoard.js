@@ -13,7 +13,8 @@ const GameBoard = (({value, onClick, nextPlayer, arr}) => {
                 <tr key={rowKey + rowIndex}>
                     {columns.map((colKey, colIndex) => {
                         return (
-                            <Cell key={colKey} reactKey={colKey} onClick={() => onClick(rowKey, colKey, nextPlayer)} value={arr[(rowIndex * 3) + colIndex]} nextPlayer={nextPlayer}/>
+                            <Cell key={colKey} reactKey={colKey} onClick={() => onClick(rowKey, colKey, nextPlayer)}
+                                  value={arr[(rowIndex * 3) + colIndex]} nextPlayer={nextPlayer}/>
                         )
                     })}
                 </tr>
